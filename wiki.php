@@ -4,12 +4,6 @@
         <meta charset="utf-8">
         <title>Wiki</title>
 				<link rel="stylesheet" type="text/css" href="wiki.css">
-				<script type="text/javascript">
-				$('#content').click(function() {
-    $('form').removeClass('hidden');
-    $('#content').addClass('hidden');
-});
-				</script>
     </head>
     <body>
 			<?php
@@ -37,5 +31,11 @@ echo $safe_content;
 ?></textarea>
     <input type="submit" value="Save">
 </form>
+<script type="text/javascript">
+$('#content').click(function() {
+$('form').removeClass('hidden');
+$('#content').addClass('hidden');
+});
+</script>
     </body>
 </html>
