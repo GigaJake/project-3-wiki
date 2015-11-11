@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
 				<link rel="stylesheet" type="text/css" href="wiki.css">
-				<script src="wiki.js"></script>
         <title>Wiki</title>
     </head>
     <body>
@@ -21,7 +20,6 @@
 			}
 
 			$safe_content = htmlentities($content);
-			echo $safe_content;
 
 			?>
 
@@ -36,6 +34,13 @@
 			<div id="content">
     		<?php echo $safe_content; ?>
 			</div>
+
+			<script type="text/javascript">
+			$('#content').click(function() {
+			$('form').removeClass('hidden');
+			$('#content').addClass('hidden');
+			});
+			</script>
 
     </body>
 </html>
