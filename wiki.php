@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-				<style link="wiki.css"></style>
+				<link rel="stylesheet" type="text/css" href="wiki.css">
 				<script src="wiki.js"></script>
         <title>Wiki</title>
     </head>
