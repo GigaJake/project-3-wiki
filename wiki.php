@@ -15,7 +15,7 @@
 			<div id="text"></div><br />
 
 			<form action="wiki.php" id="entry">
-				<textarea></textarea><br />
+				<textarea id="new"></textarea><br />
 				<input type="submit" id="button" value="Change" onclick="changeFunction()">
 			</form>
 
@@ -24,6 +24,10 @@
 				{
 				        $("#text").load("wiki.html");
 				});
+
+				function changeFunction(){
+					$("#text").load($("#new").val());
+				}
 
 
 			</script>
