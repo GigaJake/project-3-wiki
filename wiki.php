@@ -26,7 +26,8 @@
 				});
 
 				function changeFunction(){
-					$("#text").load($("#new").val());
+					var value = document.getElementById("new");
+					$.post('wiki.html',{fieldtxt: trim(value.value)},function(data){});
 				}
 
 
