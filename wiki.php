@@ -16,11 +16,14 @@
 
 			<form action="wiki.php" id="entry">
 				<textarea></textarea><br />
-				<input type="submit" value="Change">
+				<input type="submit" id="button" value="Change">
 			</form>
 
 			<script type="text/javascript">
-				$("#text").load("wiki.txt");
+			$(function()
+			{
+			        $("#text").load("wiki.html");
+			});
 			</script>
 
 
