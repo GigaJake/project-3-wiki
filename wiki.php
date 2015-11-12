@@ -1,46 +1,29 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="utf-8">
+				<script src="jquery-1.11.3.min.js"></script>
 				<link rel="stylesheet" type="text/css" href="wiki.css">
         <title>Wiki</title>
     </head>
+
     <body>
-			<?php
+			<h1>File I/O</h1>
 
-			if (file_exists('wiki.txt')) {
-					$content = file_get_contents('wiki.txt');
-			} else {
-					$content = '(no content)';
-			}
+			<b>Currently Stored: </b>
+			<div id="text"></div><br />
 
-			if (isset($_GET['content'])) {
-					$content = $_GET['content'];
-					file_put_contents('wiki.txt', $content);
-			}
-
-			$safe_content = htmlentities($content);
-
-			?>
-
-			<form class="hidden" action="wiki.php">
-    		<textarea name="content" rows="8" cols="80">
-					<?php echo $safe_content; ?>
-				</textarea>
-    		<input type="submit" value="Save">
+			<form action="wiki.php" id="entry">
+				<textarea></textarea><br />
+				<input type="submit" value="Change">
 			</form>
 
-				<?php $safe_content = htmlentities($content); ?>
-			<div id="content">
-    		<?php echo $safe_content; ?>
-			</div>
-
 			<script type="text/javascript">
-			$('#content').click(function() {
-			$('form').removeClass('hidden');
-			$('#content').addClass('hidden');
-			});
+				$("#text").load("wiki.txt");
 			</script>
 
+
     </body>
+
 </html>
