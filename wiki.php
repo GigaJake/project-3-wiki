@@ -27,7 +27,7 @@
 
 				function changeFunction(){
 					var value = document.getElementById("new");
-					$.post('wiki.html',{fieldtxt: trim(value.value)},function(data){});
+					$.post('wiki.html',$("#new").val(),function(data){});
 				}
 
 
