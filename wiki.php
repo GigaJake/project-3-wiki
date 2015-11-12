@@ -20,12 +20,11 @@
 			</form>
 
 			<script type="text/javascript">
-			function changeFunction(){
 				$(function()
 				{
 				        $("#text").load("wiki.html");
 				});
-			}
+
 
 			</script>
 
